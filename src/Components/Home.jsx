@@ -21,13 +21,18 @@ import PropTypes from "prop-types";
  */
 import image from "../images/home.png";
 
-const imageAltText = "bg image";
-
 const Home = ({ name, title }) => {
   return (
-    <section id="home" className="min-height">
-      <img className="background" src={image} alt="" />
-      <div style={{ position: "absolute", top: "5rem", left: "2rem", width: "40vw" }}>
+    <section id="home" className="min-height" style={{background:"gray"}}>
+      <img className="background" src={image} alt="" 
+        style={
+          {
+            top: "185px",
+            zIndex: "0",
+          }
+        }
+      />
+      <div style={{ position: "absolute", top: "5rem", left: "2rem" }}>
         <h1>{name}</h1>
         <h2>{title}</h2>
       </div>
